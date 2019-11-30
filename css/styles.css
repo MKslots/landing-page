@@ -92,6 +92,18 @@ section {
     transition: ease 0.3s all;
 }
 
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+li a {
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+}
+
 /* Header Styles */
 .page__header {
     background: #fff;

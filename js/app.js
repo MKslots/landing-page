@@ -18,46 +18,17 @@
  * 
 */
 
+const navList = document.querySelector(".navbar");
+const sections = document.querySelectorAll("section");
 
 /**
  * End Global Variables
- * Start Helper Functions
- * 
-*/
-
-
-
-/**
- * End Helper Functions
  * Begin Main Functions
  * 
 */
 
 // build the nav
-
-
-// Add class 'active' to section when near top of viewport
-
-
-// Scroll to anchor ID using scrollTO event
-
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
-
-const navList = document.querySelector(".navbar");
-
-
-const sections = document.querySelectorAll("section");
+// Scroll to section on link click 
 
 sections.forEach((element, index) => {
     let navElement = element.getAttribute("data-nav");
@@ -67,50 +38,49 @@ sections.forEach((element, index) => {
 
 });
 
+// Add class 'active' to section when near top of viewport
+
+window.addEventListener('scroll', event => {
+    const sectionsScroll = document.querySelectorAll('.scroll-section');
+    let fromTop = window.scrollY;
+   
+    sectionsScroll.forEach(section => {
+
+        if (
+            section.offsetTop <= fromTop &&
+            section.offsetTop + section.offsetHeight > fromTop
+        ) {
+            section.classList.add('active');
+        } else {
+        section.classList.remove('active');
+        }
+    });
+});
 
 //Active navigation on scroll
+
 window.addEventListener('scroll', event => {
-let navigationLinks = document.querySelectorAll('nav ul li a');
+    const navigationLinks = document.querySelectorAll('nav ul li a');
     let fromTop = window.scrollY;
    
     navigationLinks.forEach(link => {
 
-      let section = document.querySelector(link.hash);
+    let section = document.querySelector(link.hash);
 
-      if (
-        section.offsetTop <= fromTop &&
-        section.offsetTop + section.offsetHeight > fromTop
-      ) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
-    });
-  });
-
-
-  window.addEventListener('scroll', event => {
-    let navigationLinks = document.querySelectorAll('section');
-        let fromTop = window.scrollY;
-       
-        navigationLinks.forEach(link => {
-    
-          let section = document.querySelector(".scroll-section");
-    
-          if (
+        if (
             section.offsetTop <= fromTop &&
             section.offsetTop + section.offsetHeight > fromTop
-          ) {
+        ) {
             link.classList.add('active');
-          } else {
+        } else {
             link.classList.remove('active');
-          }
-        });
-      });
+        }
+    });
+});
 
 
-function backToTop() {
+/**
+ * End Main Functions
+ * 
+*/
 
-    window.scroll(0, 0);
-
-};
