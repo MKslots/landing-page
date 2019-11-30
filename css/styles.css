@@ -225,7 +225,7 @@ section.active .landing__container::after {
 }
 
 a.active {
-    color: red;
+    color: tomato;
 }
 
 /* Section Active Styles Keyframe Animations */

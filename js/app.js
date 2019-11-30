@@ -78,7 +78,6 @@ window.addEventListener('scroll', event => {
     });
 });
 
-
 /**
  * End Main Functions
  * 
