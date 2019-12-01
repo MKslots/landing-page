@@ -64,8 +64,6 @@ window.addEventListener("scroll", event => {
 window.addEventListener("scroll", event => {
     const navigationLinks = document.querySelectorAll("nav ul li a");
     let fromTop = window.scrollY;
-
-    let view = section[1];
    
     navigationLinks.forEach(link => {
 
