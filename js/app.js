@@ -43,16 +43,18 @@ sections.forEach((element, index) => {
 window.addEventListener("scroll", event => {
     const sectionsScroll = document.querySelectorAll(".scroll-section");
     let fromTop = window.scrollY;
+
+    
    
     sectionsScroll.forEach(section => {
 
         if (
-            section.offsetTop <= fromTop &&
-            section.offsetTop + section.offsetHeight > fromTop
+            section.offsetTop <= fromTop + 250 &&
+            section.offsetTop + section.offsetHeight > fromTop + 250         
         ) {
             section.classList.add("active");
         } else {
-        section.classList.remove("active");
+            section.classList.remove("active");
         }
     });
 });
@@ -62,14 +64,16 @@ window.addEventListener("scroll", event => {
 window.addEventListener("scroll", event => {
     const navigationLinks = document.querySelectorAll("nav ul li a");
     let fromTop = window.scrollY;
+
+    let view = section[1];
    
     navigationLinks.forEach(link => {
 
     let section = document.querySelector(link.hash);
 
         if (
-            section.offsetTop <= fromTop &&
-            section.offsetTop + section.offsetHeight > fromTop
+            section.offsetTop <= fromTop + 250 &&
+            section.offsetTop + section.offsetHeight > fromTop + 250
         ) {
             link.classList.add("active");
         } else {
