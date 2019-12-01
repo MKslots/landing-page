@@ -40,8 +40,8 @@ sections.forEach((element, index) => {
 
 // Add class 'active' to section when near top of viewport
 
-window.addEventListener('scroll', event => {
-    const sectionsScroll = document.querySelectorAll('.scroll-section');
+window.addEventListener("scroll", event => {
+    const sectionsScroll = document.querySelectorAll(".scroll-section");
     let fromTop = window.scrollY;
    
     sectionsScroll.forEach(section => {
@@ -50,17 +50,17 @@ window.addEventListener('scroll', event => {
             section.offsetTop <= fromTop &&
             section.offsetTop + section.offsetHeight > fromTop
         ) {
-            section.classList.add('active');
+            section.classList.add("active");
         } else {
-        section.classList.remove('active');
+        section.classList.remove("active");
         }
     });
 });
 
 //Active navigation on scroll
 
-window.addEventListener('scroll', event => {
-    const navigationLinks = document.querySelectorAll('nav ul li a');
+window.addEventListener("scroll", event => {
+    const navigationLinks = document.querySelectorAll("nav ul li a");
     let fromTop = window.scrollY;
    
     navigationLinks.forEach(link => {
@@ -71,9 +71,9 @@ window.addEventListener('scroll', event => {
             section.offsetTop <= fromTop &&
             section.offsetTop + section.offsetHeight > fromTop
         ) {
-            link.classList.add('active');
+            link.classList.add("active");
         } else {
-            link.classList.remove('active');
+            link.classList.remove("active");
         }
     });
 });

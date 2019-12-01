@@ -22,6 +22,10 @@ html {
     scroll-behavior: smooth;
 }
 
+main {
+    margin-bottom: 100px;
+}
+
 
 /* Typeography General*/
 h1 {
